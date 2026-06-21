@@ -1,25 +1,135 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">                                                              
-        <title>Subject Result</title>
-        <script src="SubjectResult.js" defer></script>
-    </head>
-    <body>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Subject Result</title>
+    <script src="SubjectResult.js" defer></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #dbeafe, #bfdbfe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            width: 420px;
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid #93c5fd;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 8px;
+            border: none;
+        }
+
+        label {
+            font-weight: bold;
+            color: #374151;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .button {
+            text-align: center;
+        }
+
+        button {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            margin-top: 10px;
+            box-shadow: 0px 4px 10px rgba(37, 99, 235, 0.3);
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="=container">
         <h1>Subject Results</h1>
-        <label for="lblSubject">Telugu:</label>
-        <input id="txtTelugu" type="number" placeholder="Enter your Marks"><br>
-         <label for="lblSubject">Hindi:</label>
-        <input id="txtHindi" type="number" placeholder="Enter your Marks"><br>
-         <label for="lblSubject">English:</label>
-        <input id="txtEnglish" type="number" placeholder="Enter your Marks"><br>
-         <label for="lblSubject">Maths:</label>
-        <input id="txtMaths" type="number" placeholder="Enter your Marks"><br>
-         <label for="lblSubject">Science:</label>
-        <input id="txtScience" type="number" placeholder="Enter your Marks"><br>
-         <label for="lblSubject">Social:</label>
-        <input id="txtSocial" type="number" placeholder="Enter your Marks"><br>
-        <button id="btnPassOrFail" onclick="onClickSubjecResults()">Pass or Fail</button>
-        <p id="pResult"></p>
-    </body>
+        <table border="3">
+            <tr>
+                <td><label for="lblSubject">Telugu:</label></td>
+                <td><input id="txtTelugu" type="number" placeholder="Enter your Marks"></td>
+            </tr>
+            <tr>
+                <td><label for="lblSubject">Hindi:</label></td>
+                <td><input id="txtHindi" type="number" placeholder="Enter your Marks"></td>
+            </tr>
+            <tr>
+                <td><label for="lblSubject">English:</label></td>
+                <td><input id="txtEnglish" type="number" placeholder="Enter your Marks"></td>
+            </tr>
+            <tr>
+                <td><label for="lblSubject">Maths:</label></td>
+                <td><input id="txtMaths" type="number" placeholder="Enter your Marks"></td>
+            </tr>
+            <tr>
+                <td><label for="lblSubject">Science:</label></td>
+                <td><input id="txtScience" type="number" placeholder="Enter your Marks"></td>
+            <tr>
+                <td><label for="lblSubject">Social:</label></td>
+                <td><input id="txtSocial" type="number" placeholder="Enter your Marks"></td>
+                <div class="button">
+            <tr>
+                <td><button id="btnPassOrFail" onclick="onClickSubjecResults()">Pass or Fail</button></td>
+            </tr>
+    </div>
+
+    </table>
+    <p id="pResult"></p>
+    <p id="pTotal"></p>
+    <p id="pAverage"></p>
+    <p id="pPercentage"></p>
+    <p id="pTelugu"></p>
+    <p id="pHindi"></p>
+    <p id="pEnglish"></p>
+    <p id="pMaths"></p>
+    <p id="pScience"></p>
+    <p id="pSocial"></p>
+    </div>
+</body>
+
 </html>
